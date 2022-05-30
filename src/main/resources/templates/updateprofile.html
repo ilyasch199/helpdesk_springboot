@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/index}" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Profil</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous" />
+    <link th:href="@{~/css/headerhome.css}" rel="stylesheet">
+    <link th:href="@{~/css/footerhome.css}" rel="stylesheet">
+</head>
+<body>
+<div th:replace="headerhome :: header"></div>
+	<div class="card">
+        <div class="card-header">Profil Update</div>
+        <div class="card-body row">
+            <div class="col-3"></div>
+            <form class="form-signin col-6" method="post" th:object="${user}"  th:action="@{/update_user}" >
+                <label for="nom" style="color: blue;">NOM</label>
+                <input type="text" id="nom" name="nom"  class="form-control mb-3" required
+                       autofocus th:value="${user.nom}" th:name="nom">
+
+                <label for="email" style="color: blue;">EMAIL</label>
+                <input type="text" class="form-control mb-3" required autofocus th:value="${user.email}" th:name="email">
+
+                <label style="color: blue;">PASSWORD</label>
+                <input type="text" class="form-control mb-3" th:name="password">
+                
+                <label for="phone_number" style="color: blue;">PHONE NUMBER</label>
+                <input type="text" id="phone_number" class="form-control mb-3" name="phone_number" required
+                       autofocus th:value="${user.phone_number}" th:name="phone_number">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <button class="btn btn-primary btn-block" type="submit">Update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<div th:replace="footerhome :: footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package devoir.charqielquortobi.Security;
+	package devoir.charqielquortobi.Security;
 
 import java.util.*;
 
@@ -6,15 +6,15 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import devoir.charqielquortobi.models.Utilisateur;
+import devoir.charqielquortobi.models.utilisateur;
 
 public class UserPrincipal implements UserDetails{
 
 	private static final long serialVersionUID = 2975571009655827897L;
 	
-	private Utilisateur user;
+	private utilisateur user;
 	
-	public UserPrincipal(Utilisateur user) {
+	public UserPrincipal(utilisateur user) {
 		this.user = user;
 	}
 
@@ -29,6 +29,7 @@ public class UserPrincipal implements UserDetails{
 		
 		return authorities;
 	}
+
 
 	@Override
 	public String getPassword() {

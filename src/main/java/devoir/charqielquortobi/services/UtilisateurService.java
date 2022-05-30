@@ -2,29 +2,39 @@ package devoir.charqielquortobi.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.*;
 
 import devoir.charqielquortobi.models.*;
-import devoir.charqielquortobi.repositories.*;
 
 //@EnableJpaRepositories("UtilisateurRepository")
-//@Service
+@Service
 public interface UtilisateurService {
 
-	public Utilisateur FindByName(String name);
+	public utilisateur FindByName(String name);
 	
-	public void save(Utilisateur utilisateur);
+	public void save(utilisateur utilisateur);
 	
-	public void update(Utilisateur utilisateur);
+	public void update(utilisateur utilisateur);
 	
-	public List<Utilisateur> findAllUser();
+	public List<utilisateur> findAllUser();
 	
-	public void deleteUser(long id_user);
+	public void deleteUser(int id_user);
 
-
+	public List<utilisateur> getDevs();
+	
+	public utilisateur FintById(int idUser);
+	
+	public List<ticket> getClientTickets(int idUser);
+	
+	public List<ticket> getDevsTickets(int idUser);
+	
+	public void affecter(int idticket ,int idDev);
+	
+	
+	
+	
+	
+	
 	
 //	@Autowired
 //	private UtilisateurRepository UtilisateurRepo;

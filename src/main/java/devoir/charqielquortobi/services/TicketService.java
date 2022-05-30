@@ -5,18 +5,22 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import devoir.charqielquortobi.models.Ticket;
+import devoir.charqielquortobi.models.ticket;
 
 @Service
 public interface TicketService {
 
+	public void addTicket(ticket ticket);
 
-	public void addTicket(Ticket ticket);
-
-	public List<Ticket> listTicket();
+	public List<ticket> listTicket();
 	
-	public Optional<Ticket> getTicketById(long ticket_id);
+	public Optional<ticket> getTicketById(int ticket_id);
 	
-	public void deleteTicket(long ticket_id);
-
+	public void deleteTicket(int ticket_id);
+	
+	public ticket getTicket(int tick);
+	
+	public List<ticket> listclientTicket(int id_user);
+	
+	public List<ticket> listDevTicket(int iduser);
 }

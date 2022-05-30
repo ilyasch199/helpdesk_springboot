@@ -1,15 +1,14 @@
 package devoir.charqielquortobi.models;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "ticket")
-public class Ticket {
+public class ticket {
 	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO) @Column(name = "id_ticket")
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY) @Column(name = "id_ticket")
 	private int id_ticket;
 	
 	@Column(name = "description")
@@ -25,17 +24,23 @@ public class Ticket {
 	private String logiciel;
 	
 	@Column(name = "status")
-	private boolean status;
+	private int status;
 	
 	@Column(name = "date")
 	private Date date;
 	
 	@Column(name = "attribue_a")
-	private String attribue_a;
+	private int attribue_a;
 	
+	@JoinColumn(name = "id_user")
+	private int id_user;
 
-	public Ticket() {
+	public ticket() {
 		
+	}
+	
+	public ticket(int attribue_a) {
+		this.attribue_a = attribue_a;
 	}
 
 	public int getId_ticket() {
@@ -78,11 +83,11 @@ public class Ticket {
 		this.logiciel = logiciel;
 	}
 
-	public boolean isStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -94,12 +99,21 @@ public class Ticket {
 		this.date = date;
 	}
 
-	public String getAttribue_a() {
+	public int getAttribue_a() {
 		return attribue_a;
 	}
 
-	public void setAttribue_a(String attribue_a) {
+	public void setAttribue_a(int attribue_a) {
 		this.attribue_a = attribue_a;
 	}
+
+	public int getId_user() {
+		return id_user;
+	}
+
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
+	}
+	
 	
 }
