@@ -1,1 +1,9 @@
 # helpdesk_springboot
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture1.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture3.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture4.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture5.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture6.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture7.PNG)
+![alt text](https://github.com/ilyasch199/helpdesk_springboot/blob/main/src/main/resources/static/images/Capture8.PNG)
